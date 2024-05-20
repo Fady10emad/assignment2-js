@@ -1,0 +1,139 @@
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.min.css">
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="backGround">
+
+  <div class="position-relative text-center">
+    <h1 class="text-center pt-5"> BookMarker</h1>
+  </div>
+
+
+
+
+  <div class="line "></div>
+
+
+  <h3 class="text-center pt-3 pb-3">
+    <i class="fa-solid fa-bookmark"></i>
+    Bookmark your favorite sites
+    <i class="fa-solid fa-bookmark"></i>
+  </h3>
+
+
+
+
+  <div class="container">
+    <form>
+      <div class="mb-3">
+        <label for="SiteName" class="form-label fw-semibold"><i class="fa-solid fa-book"></i> Site Name</label>
+        <input type="text" class="form-control" required id="SiteName" placeholder="Bookmark Name">
+      </div>
+
+      <div class="mb-3">
+        <label for="SiteLink" class="form-label fw-semibold"><i class="fa-solid fa-link"></i> Website</label>
+        <input type="text" class="form-control" required id="SiteLink" placeholder="Website URL">
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="button" onclick="addRow()" class="btn btn-danger text-center ps-3 pe-3">Submit</button>
+      </div>
+    </form>
+  </div>
+
+
+
+
+
+
+  <div id="alertBox" class="box-content p-4  shadow-lg  align-items-center justify-content-center">
+    <div class="w_div bg-white ">
+      <div class="container">
+        <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+          <div class="circles d-flex">
+            <span class="rounded-circle me-2 bg-danger w-25 h-25"></span>
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+          </div>
+          <button class="btn border-0" onclick="closeBtn()">
+            <i class="fa-solid fa-xmark close fs-3"></i>
+          </button>
+        </header>
+        <p class="m-0 pb-2 fs-5 fw-bold mt-5">
+          Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <ol class="rules list-unstyled m-0">
+          <li class="fs-5">
+            <i class="fa-regular fa-circle-right p-2 "></i>Site name must
+            contain at least 3 characters
+          </li>
+          <li class="fs-5">
+            <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+            valid one
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="line "></div>
+
+
+
+  <div class="container">
+    <table class="table table-striped align-middle text-center">
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Website Name</th>
+          <th>Visit </th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+
+
+      <tbody id="myData">
+        <!-- <tr>
+    <td>fffff</td>
+    <td>fffff</td>
+    <td><button type="button" class="btn btn-primary"> Visit </button></td>
+    <td><button type="button" class="btn btn-danger"> Delete </button></td>
+  </tr> -->
+      </tbody>
+
+
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
